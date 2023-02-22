@@ -22,7 +22,6 @@ namespace LoginRegistrationApp.Controllers
         [HttpPost]
         [Route("registrationform")]
         public string registrationform(Registrationform registrationform)
-            
         {
             SqlConnection con = new SqlConnection(_configuration.GetConnectionString("TestToy").ToString());
             SqlCommand cmd = new SqlCommand("INSERT INTO registrationform(UserName,Password,Email,IsActive) " +
